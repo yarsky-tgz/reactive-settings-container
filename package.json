@@ -1,6 +1,6 @@
 {
   "name": "reactive-settings-container",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "container for easily making your settings shared across different processes or servers",
   "main": "index.js",
   "scripts": {
