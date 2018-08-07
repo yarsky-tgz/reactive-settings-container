@@ -45,7 +45,7 @@ or even be subscribed for changes
 ```javascript
 const settings = require('./settings.js');
 
-settings.on('change:someValue', function (newValue) {
+settings.on('changed:someValue', function (newValue) {
   //your immediate adaptation to changed settings 
 });
 settings.trigger('someValue'); //your event listener to be runt first time
