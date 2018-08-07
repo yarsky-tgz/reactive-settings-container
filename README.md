@@ -1,6 +1,12 @@
 # reactive-settings-container
 container for easily making your settings shared across different processes or servers
 
+## Installation
+
+```bash
+npm i reactive-settings-container
+```
+
 ## Usage
 
 For subsribing on settings changes you must implement module like this, named for example `settings.js`:
