@@ -34,7 +34,7 @@ class Settings extends EventEmitter {
   
   async get(key) {
     const _this = this;
-    if (!this._filled) await new Promise(resolve => _this.once('_filled', () => resolve()));
+    if (!this._filled) await new Promise(resolve => _this.once('_filled', resolve));
     return this._data[ key ];
   }
 }
