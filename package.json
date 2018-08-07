@@ -1,0 +1,27 @@
+{
+  "name": "reactive-settings-container",
+  "version": "1.0.0",
+  "description": "container for easily making your settings shared across different processes or servers",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap -T -j2 --coverage test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yarsky-tgz/reactive-settings-container.git"
+  },
+  "keywords": [
+    "reactive",
+    "settings",
+    "share",
+    "workers",
+    "servers",
+    "processes"
+  ],
+  "author": "Yaroslav Dobzhanskij <merlyn.tgz@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yarsky-tgz/reactive-settings-container/issues"
+  },
+  "homepage": "https://github.com/yarsky-tgz/reactive-settings-container#readme"
+}
