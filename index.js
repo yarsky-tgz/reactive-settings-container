@@ -16,6 +16,10 @@ class Settings extends EventEmitter {
     return true;
   }
   
+  _untilFilled() {
+    if (!this._filled) return new Promise(resolve => this.once('_filled', resolve));
+  }
+  
   fill(data) {
     for (let key in data) {
       if (data.hasOwnProperty(key)) {
@@ -33,9 +37,16 @@ class Settings extends EventEmitter {
   }
   
   async get(key) {
-    const _this = this;
-    if (!this._filled) await new Promise(resolve => _this.once('_filled', resolve));
+    await this._untilFilled();
     return this._data[ key ];
+  }
+  
+  async few(keys) {
+    await this._untilFilled();
+    return keys.reduce((settingsSlice, key) => {
+      settingsSlice[key] = this._data[ key ];
+      return settingsSlice;
+    }, {});
   }
 }
 

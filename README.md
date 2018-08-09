@@ -30,13 +30,24 @@ module.exports = reactiveSettings;
 
 so with emitting event `settings` from control node you shall easily sync your settings everywhere. 
 
-and after this you can use it anywhere in such manner for getting most fresh value at this momeny:
+and after this you can use it anywhere in such manner to `get()` most fresh value at this momeny:
 
 ```javascript
 const settings = require('./settings.js');
 
 async function f() {
   const someValue = await settings.get('someValue');
+}
+```
+
+also you can get `few()` keys at once
+
+```javascript
+const settings = require('./settings.js');
+
+async function f() {
+  const { someValue, otherValue, somethingCompletelyDifferent, larch } = 
+    await settings.few(['someValue', 'otherValue', 'somethingCompletelyDifferent', 'larch');
 }
 ```
 
