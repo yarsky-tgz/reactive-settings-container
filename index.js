@@ -5,7 +5,7 @@ class Settings extends EventEmitter {
     super();
     this._filled = false;
     this._data = new Proxy({}, {
-      set: this._setter
+      set: this._setter.bind(this)
     })
   }
   
